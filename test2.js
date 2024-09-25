@@ -1,7 +1,5 @@
-// test2.js
 
-const romanToInt = require('./program2'); // Correct path to your program file
-
+const romanToInt = require('./program2'); 
 describe('test cases for problem 2', function() {
     it('test case 1', function() {
         const result = romanToInt("III");
@@ -18,7 +16,7 @@ describe('test cases for problem 2', function() {
         if (result !== 1994) throw new Error('Test case 3 failed');
     });
 
-    // Add more test cases as needed
+   
 });
 
 

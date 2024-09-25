@@ -23,11 +23,11 @@ describe('test cases for problem 1', function() {
     });
 
     it('test case 6', function() {
-        assert.strictEqual(isValid(""), true); // empty string
+        assert.strictEqual(isValid(""), true); 
     });
 
     it('test case 7', function() {
-        assert.strictEqual(isValid("{[()]()}"), true); // nested
+        assert.strictEqual(isValid("{[()]()}"), true); 
     });
 });
 
