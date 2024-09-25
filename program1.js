@@ -18,7 +18,7 @@ function isValid(s) {
         }
     }
 
-    // If the stack is empty, all brackets were matched
+   
     return stack.length === 0;
 }
 
