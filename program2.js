@@ -29,7 +29,6 @@ function romanToInt(s) {
 module.exports = romanToInt; // Yeh line add karein
 
 
-// Example usage:
 console.log(romanToInt("III"));     
 console.log(romanToInt("LVIII"));   
 console.log(romanToInt("MCMXCIV")); 
