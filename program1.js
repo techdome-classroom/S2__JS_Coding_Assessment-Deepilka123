@@ -23,9 +23,9 @@ function isValid(s) {
 }
 
 
-console.log(isValid("()")); // Output: true
-console.log(isValid("()[]{}")); // Output: true
-console.log(isValid("(]")); // Output: false
+console.log(isValid("()")); 
+console.log(isValid("()[]{}")); 
+console.log(isValid("(]")); 
 
 
 
