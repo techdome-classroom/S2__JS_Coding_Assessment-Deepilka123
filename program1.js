@@ -22,7 +22,7 @@ function isValid(s) {
     return stack.length === 0;
 }
 
-// Example Usage:
+
 console.log(isValid("()")); // Output: true
 console.log(isValid("()[]{}")); // Output: true
 console.log(isValid("(]")); // Output: false
