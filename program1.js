@@ -11,7 +11,7 @@ function isValid(s) {
            
             stack.push(char);
         } else {
-            // If the character is a closing bracket
+           
             if (stack.length === 0 || map[stack.pop()] !== char) {
                 return false; // Return false if not valid
             }
