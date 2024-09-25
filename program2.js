@@ -26,6 +26,8 @@ function romanToInt(s) {
 
     return total;
 }
+module.exports = romanToInt; // Yeh line add karein
+
 
 // Example usage:
 console.log(romanToInt("III"));     // Output: 3
