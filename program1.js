@@ -8,7 +8,7 @@ function isValid(s) {
 
     for (let char of s) {
         if (map[char]) {
-            // If the character is an opening bracket, push it to the stack
+           
             stack.push(char);
         } else {
             // If the character is a closing bracket
