@@ -1,31 +1,31 @@
 function isValid(s) {
     const stack = [];
-    const map = {
-        '(': ')',
-        '{': '}',
-        '[': ']'
+    const mapping = {
+        ')': '(',
+        '}': '{',
+        ']': '[',
     };
 
     for (let char of s) {
-        if (map[char]) {
-           
-            stack.push(char);
-        } else {
-           
-            if (stack.length === 0 || map[stack.pop()] !== char) {
-                return false; 
+        // Agar char closing bracket hai
+        if (char in mapping) {
+            // Pop the topmost element from the stack if it's not empty, else assign a dummy value
+            const topElement = stack.length === 0 ? '#' : stack.pop();
+            // Check if the popped element matches the mapping
+            if (mapping[char] !== topElement) {
+                return false;
             }
+        } else {
+            // It's an opening bracket, push onto stack
+            stack.push(char);
         }
     }
-
-   
+    // Return true if no unmatched opening brackets remain
     return stack.length === 0;
 }
 
-
-console.log(isValid("()")); 
-console.log(isValid("()[]{}")); 
-console.log(isValid("(]")); 
+// Exporting the function
+module.exports = isValid;
 
 
 
