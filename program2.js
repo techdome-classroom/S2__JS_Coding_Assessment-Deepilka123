@@ -16,17 +16,17 @@ function romanToInt(s) {
         const currentValue = romanMap[s[i]];
         
         if (currentValue < prevValue) {
-            total -= currentValue; // Subtract if the current value is less than the previous
+            total -= currentValue; 
         } else {
-            total += currentValue; // Add otherwise
+            total += currentValue; 
         }
         
-        prevValue = currentValue; // Update previous value
+        prevValue = currentValue; 
     }
 
     return total;
 }
-module.exports = romanToInt; // Yeh line add karein
+module.exports = romanToInt; 
 
 
 console.log(romanToInt("III"));     
