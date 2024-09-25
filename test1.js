@@ -1,44 +1,35 @@
-const {isValid} = require("./program1");
-const assert = require("assert");
+const assert = require('assert');
+const isValid = require('./program1.js');
 
-
-
-describe("test cases for problem 1 ", function () {
-
-    it("test case 1", function () {
-        const result = isValid("()");
-        assert.equal(true, result);
+describe('test cases for problem 1', function() {
+    it('test case 1', function() {
+        assert.strictEqual(isValid("()"), true);
     });
 
-    it("test case 2", function () {
-        const result = isValid("()[]{}");
-        assert.equal(true, result);
+    it('test case 2', function() {
+        assert.strictEqual(isValid("()[]{}"), true);
     });
 
-    it("test case 3", function () {
-        const result = isValid("{[()]}");
-        assert.equal(true, result);
+    it('test case 3', function() {
+        assert.strictEqual(isValid("(]"), false);
     });
 
-    it("test case 4", function () {
-        const result = isValid("(]");
-        assert.equal(false, result);
+    it('test case 4', function() {
+        assert.strictEqual(isValid("([)]"), false);
     });
 
-    it("test case 5", function () {
-        const result = isValid("([)]");
-        assert.equal(false, result);
+    it('test case 5', function() {
+        assert.strictEqual(isValid("{[]}"), true);
     });
 
-    it("test case 6", function () {
-        const result = isValid("");
-        assert.equal(true, result);
+    it('test case 6', function() {
+        assert.strictEqual(isValid(""), true); // empty string
     });
 
-    it("test case 7", function () {
-        const result = isValid("(){");
-        assert.equal(false, result);
+    it('test case 7', function() {
+        assert.strictEqual(isValid("{[()]()}"), true); // nested
     });
+});
 
-})
+
 
