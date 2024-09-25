@@ -13,7 +13,7 @@ function isValid(s) {
         } else {
            
             if (stack.length === 0 || map[stack.pop()] !== char) {
-                return false; // Return false if not valid
+                return false; 
             }
         }
     }
